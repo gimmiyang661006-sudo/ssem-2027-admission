@@ -218,8 +218,7 @@
 
 <script>
 const CONFIG = { adminPassword: "SSEMADMIN2027" };
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwqpayBO1QwDGqGPq5E5jrKt-xUT0qXjMmFpymK4DkCJNvEkMQmR7lrrg1BUtdPYvmr/exec";
-
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwG8OgL3j-2iJJS_Xoq-BOnedxlr7_AVpICfjslXDdoHrFYycLgpoLHGsnG9_EugAZY/exec";
 function $(id){ return document.getElementById(id); }
 
 function val(id){
@@ -419,7 +418,6 @@ function runDiagnosis(){
   }
 
   const submission = {
-    const submission = {
   time: new Date().toLocaleString("ko-KR"),
   name: val("name"),
   school: val("school"),
@@ -427,16 +425,16 @@ function runDiagnosis(){
   parentPhone: val("parentPhone"),
   approvalCode: val("approvalCode"),
   grade,
-    schoolType: val("schoolType"),
-    activity: val("activity"),
-    track,
-    career: val("career"),
-    univ,
-    major,
-    record: val("record"),
-    result: `합격 ${low}~${high}%, 불합격 ${failLow}~${failHigh}%`,
-    label
-  };
+  schoolType: val("schoolType"),
+  activity: val("activity"),
+  track,
+  career: val("career"),
+  univ,
+  major,
+  record: val("record"),
+  result: `합격 ${low}~${high}%, 불합격 ${failLow}~${failHigh}%`,
+  label
+};
 
   const arr = JSON.parse(localStorage.getItem("ssemSubmissions") || "[]");
   arr.push(submission);
